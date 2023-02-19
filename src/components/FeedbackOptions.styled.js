@@ -10,10 +10,16 @@ export const List = styled.ul`
 
 export const Button = styled.button`
     font-size: 14px;
-    width: 80px;
+    width: 100px;
     text-transform: uppercase;
     padding: 10px 0;
     border-radius: 10px;
-    border: 1px solid #ccc;;
+    border-color: transparent;
     cursor: pointer;
+    &:hover {
+        background-color: #1e81b0;
+    };
+    &:hover {
+        color: #ffff;
+    }
 `;
