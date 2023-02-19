@@ -3,6 +3,7 @@ import Statistics from './Statistics';
 import FeedbackOptions from './FeedbackOptions';
 import Section from './Section';
 import Notification from './Notification';
+import {Container} from './App.styled';
 
 function App() {
   const [feedback, setFeedback] = useState({ good: 0, neutral: 0, bad: 0 });
@@ -24,7 +25,7 @@ function App() {
   const options = Object.keys(feedback);
 
   return (
-    <div>
+    <Container>
       <Section title="Please leave your feedback">
         <FeedbackOptions options={options} onLeaveFeedback={handleFeedback} />
       </Section>
@@ -41,7 +42,7 @@ function App() {
           <Notification message="There is no feedback" />
         )}
       </Section>
-    </div>
+    </Container>
   );
 }
 
